@@ -1,7 +1,9 @@
 
 
 .google_button{
-  min-width: 170px;
+  max-width: 200px;
+  width:auto;
+  min-width: 150px;
   min-height: 40px;
   max-height: 40px;
   background-color: #f8f9fa;
@@ -17,6 +19,10 @@
 .centered{
     display: grid;
     place-items: center;
+    /* background-color: yellow; */
+    height:100px;
+    min-width:0px;
+    margin: 10px;
   }
 
   #search_style{
@@ -35,28 +41,28 @@
 .flex_box_buttons{
   @extend %flex_box_base_case;
   background-color: none;
-  gap: 20px;
+  gap: 10px;
 }
 
 
-$flex_box_search_width: 570px;
+
 .flex_box_search:hover{ 
   box-shadow: 0 1px 6px 0 #171717;
   border-color: rgba(223,225,229,0);
   background-color: none;
 }
 
-
+$flex_box_search_width: 570px;
 .flex_box_search{
   @extend %flex_box_base_case;
-  min-height: 30px;
+  min-height: 44px;
   min-width: $flex_box_search_width;
   justify-content: flex-start;
   align-items: center;
   padding-left: 15px;
   border-radius: 1.6rem;
   border: 1px solid #e2e5ea;
-  margin-bottom: 100px;
+  margin-bottom: 32px;
   gap: 20px;
   background-color: white;
  }
@@ -88,7 +94,8 @@ $flex_box_search_width: 570px;
 
 
   #google_logo{
-    max-width: 270px;
+    max-width: 300px;
+    margin-bottom: 25px;
   }
 
 
@@ -97,15 +104,16 @@ $flex_box_search_width: 570px;
 
 /*medias down*/
 
-
-  @media (max-width: ($flex_box_search_width + 45px)) {
     .flex_box_search {
         min-width: 100%;
     }
     #form{
-        min-width: 95%;
+      min-width: 0px;
+      width:100%;
+      max-width: 605px;
+      /* background-color:pink; */  
     } 
-}
+
 
     #spacing {
         height: calc(100vh - 700px);
